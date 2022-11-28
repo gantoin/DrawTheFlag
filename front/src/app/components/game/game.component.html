@@ -1,0 +1,26 @@
+<div class="container center">
+	<h2>Georgia</h2>
+	<div class="row">
+		<i class="material-icons medium" (click)="this.myCanvas.clearCanvas()">delete</i>
+		<i class="material-icons medium" (click)="this.myCanvas.changeColor('white')">format_color_reset</i>
+		<i class="material-icons medium" (click)="this.myCanvas.biggerOffset(5)">add</i>
+		<i class="material-icons medium" (click)="this.myCanvas.biggerOffset(-5)">remove</i>
+		<i class="material-icons medium" (click)="this.myCanvas.fillCanvasWithColor()">format_color_fill</i>
+		<i class="material-icons medium" (click)="this.myCanvas.fillZone()">format_color_fill</i>
+		<i (click)="this.myCanvas.changeColor('black')" style="display: inline-block; height: 50px; width: 20px; background-color: black"></i>
+		<i (click)="this.myCanvas.changeColor('red')" style="display: inline-block; height: 50px; width: 20px; background-color: red"></i>
+		<i (click)="this.myCanvas.changeColor('blue')" style="display: inline-block; height: 50px; width: 20px; background-color: blue"></i>
+		<i (click)="this.myCanvas.changeColor('green')" style="display: inline-block; height: 50px; width: 20px; background-color: green"></i>
+		<i (click)="this.myCanvas.changeColor('yellow')" style="display: inline-block; height: 50px; width: 20px; background-color: yellow"></i>
+		<i (click)="this.myCanvas.changeColor('orange')" style="display: inline-block; height: 50px; width: 20px; background-color: orange"></i>
+		<i (click)="this.myCanvas.changeColor('purple')" style="display: inline-block; height: 50px; width: 20px; background-color: purple"></i>
+		<i (click)="this.myCanvas.changeColor('brown')" style="display: inline-block; height: 50px; width: 20px; background-color: brown"></i>
+		<i (click)="this.myCanvas.changeColor('gray')" style="display: inline-block; height: 50px; width: 20px; background-color: gray"></i>
+	</div>
+	<div class="row">
+		<canvas #myCanvas=myCanvas myCanvas style="border: solid 1px black"></canvas>
+	</div>
+	<div class="row">
+		<button id="btn" class="btn waves-effect waves-light" (click)="sendDraw($event)">Send</button>
+	</div>
+</div>
